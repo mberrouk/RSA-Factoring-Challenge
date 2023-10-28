@@ -70,6 +70,15 @@ try:
             if factors is not None:
                 factor1, factor2 = factors
                 print(f"{num}={factor1}*{factor1}")
+            else:
+                n = 3
+                while n < math.sqrt(num):
+                    if not num % n:
+                        print("{:d}={:d}*{:d}".format(int(num), int(int(num) \
+                                / n), n))
+                        break
+                    n += 1
+
 except:
     print("Error! ...program terminated")
     exit(1)
