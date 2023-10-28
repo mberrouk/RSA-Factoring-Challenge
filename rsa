@@ -19,7 +19,7 @@ def pollard_rho(n):
     if d == n:
         return None  # Failed to find a factor
     else:
-        return d, n // d
+        return n // d, d
 
 if len(sys.argv) < 2:
     print("Usage: factors <file>", file=sys.stderr)
