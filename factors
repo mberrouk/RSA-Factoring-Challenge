@@ -72,7 +72,7 @@ try:
                 print(f"{num}={factor1}*{factor1}")
             else:
                 n = 3
-                while n < math.sqrt(num):
+                while n < math.sqrt(int(num)):
                     if not num % n:
                         print("{:d}={:d}*{:d}".format(int(num), int(int(num) \
                                 / n), n))
