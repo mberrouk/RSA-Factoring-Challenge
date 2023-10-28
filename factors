@@ -65,6 +65,8 @@ try:
         num = line.strip('\n')
         if not int(num) % 2:
             print("{:d}={:d}*{:d}".format(int(num), int(int(num) / 2), 2))
+        elif int(num) < 2:
+            continue
         else:
             factors = pollard_rho(int(num))
             if factors is not None:
@@ -73,7 +75,7 @@ try:
             else:
                 n = 3
                 while n < math.sqrt(int(num)):
-                    if not num % n:
+                    if not int(num) % n:
                         print("{:d}={:d}*{:d}".format(int(num), int(int(num) \
                                 / n), n))
                         break
